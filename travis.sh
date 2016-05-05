@@ -12,7 +12,7 @@ chmod 600 ~/.ssh/id_rsa
 # chmod 600 ~/.ssh
 
 # cat ~/.ssh/config
-git clone git@git.oschina.net:EmacsChina/elpa.git packages
+git clone git@git.oschina.net:EmacsChina/elpa.git packages --depth=1
 npm install
 node index.js
 cd packages

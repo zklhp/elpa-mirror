@@ -2,9 +2,10 @@
 
 ## 安装
 ```elisp
-(setq package-archives '(("gnu-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/gnu/")
-             ("org-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/org/")
-             ("melpa-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/melpa/")))
+(setq package-archives 
+    '(("gnu-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/gnu/")
+      ("org-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/org/")
+      ("melpa-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/melpa/")))
 ```
 
 `https` 不能正常工作的可以改成 `http`
