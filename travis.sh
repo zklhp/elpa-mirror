@@ -19,5 +19,5 @@ cd packages
 git add .
 git commit -m "update"
 
-git push origin master:master --quiet
+git push origin master:master
 
