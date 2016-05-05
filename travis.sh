@@ -12,7 +12,7 @@ chmod 600 ~/.ssh/id_rsa
 # chmod 600 ~/.ssh
 
 # cat ~/.ssh/config
-git clone git@git.coding.net:codefalling/melpa-mirror.git packages
+git clone git@git.coding.net:codefalling/elpa.git packages
 npm install
 node index.js
 cd packages

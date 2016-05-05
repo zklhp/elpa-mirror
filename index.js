@@ -3,41 +3,42 @@ var sd = require('super-download');
 var Q = require('q');
 var http = require('http');
 
-var config = require('./config');
+var ELPA_LIST = require('./config').list;
+var parse_packages = require('./config').parse_packages;
 
-var PARSE_REGEX = /\(([^ ]*) \. \[\((\d*) (\d*)\).*?( tar | single )/g;
-var PARSE_LINE_REGEX = /\(([^ ]*) \. \[\((\d*) (\d*)\).*?( tar | single )/;
-http.globalAgent.maxSockets = 300; // melpa limit 500
+var ARCHIVE_CONTENTS = 'archive-contents';
 
-rp(config.ELPA_ARCHIVE_CONTENTS_URL)
-  .then(function(data){
-    console.log('fetched');
-    var lines = data.match(PARSE_REGEX);
-    var packages = [];
-    for (var i in lines) {
-      temp = lines[i].match(PARSE_LINE_REGEX);
-      packages.push(
-        temp[1] + '-' + temp[2] + '.' + temp[3] + '.' + (temp[4] === ' tar ' ? 'tar' : 'el')
-      );
-    }
-    downloadPackages(packages);
-  }).catch(function(err){
-    console.log(err);
-  });
+http.globalAgent.maxSockets = 300;
 
 
+function fetchElpa(elpa){
+  rp(ELPA_LIST[elpa] + ARCHIVE_CONTENTS)
+    .then(function(data){
+      console.log(elpa + ' fetched');
+      var packages = parse_packages[elpa](data);
+      downloadPackages(packages, elpa);
+    }).catch(function(err){
+      console.log(err);
+    });
+}
 
-function downloadPackages(packages){
+for (var name in ELPA_LIST) {
+  fetchElpa(name);
+}
+
+
+
+function downloadPackages(packages, elpa){
   var tasks = [];
   var progress = 0;
-  tasks.push(sd(config.ELPA_ARCHIVE_CONTENTS_URL, {
-    directory: "./packages",
+  tasks.push(sd(ELPA_LIST[elpa] + ARCHIVE_CONTENTS, {
+    directory: 'packages' + elpa,
     timeout: 9999999999
   }));
   for (var i in packages) {
     var filename = packages[i];
-    var promise =  sd(config.ELPA_URL + filename, {
-      directory: "./packages",
+    var promise =  sd(filename, {
+      directory: "packages" + elpa,
       timeout: 9999999999
     });
     promise.filename = filename;
@@ -47,17 +48,17 @@ function downloadPackages(packages){
   }
 
   function done(){
-    console.log('All DONE');
+    console.log(elpa + 'DONE');
   }
 
   Q.all(tasks.map(function(task){
     return task.then(function(){
       progress ++;
-      console.log(progress + '/' + tasks.length);
+      console.log(elpa + progress + '/' + tasks.length);
     }).catch(function(err){
       console.log('\n' + task.filename + '\n===\n' + err);
       progress ++;
-      console.log(progress + '/' + tasks.length);
+      console.log(elpa + progress + '/' + tasks.length);
     });
   }))
     .then(function(){
@@ -65,6 +66,5 @@ function downloadPackages(packages){
     }).catch(function(err){
       console.log(err);
     });
-
 
 }
