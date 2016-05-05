@@ -5,7 +5,7 @@ mkdir ~/.ssh
 echo -e $SSH_KEY > ~/.ssh/id_rsa
 echo -e "StrictHostKeyChecking no\n" >> ~/.ssh/config
 echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-chmod 600 ~/.ssh/id_rsa
+chmod 600 ~/.ssh/*
 chmod 600 ~/.ssh
 export GIT_TERMINAL_PROMPT=0
 git clone git@git.coding.net:codefalling/melpa-mirror.git packages
