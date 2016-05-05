@@ -1,6 +1,10 @@
 [![Build Status](https://travis-ci.org/CodeFalling/elpa-mirror.svg?branch=master)](https://travis-ci.org/CodeFalling/elpa-mirror)
 
-## 安装
+## 介绍
+
+GNU ELPA, MELPA, ORG ELPA 的国内源。
+
+## 使用
 ```elisp
 (setq package-archives 
     '(("gnu-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/gnu/")
