@@ -38,7 +38,7 @@ function downloadPackages(packages, elpa){
   for (var i in packages) {
     var filename = packages[i];
     var promise =  sd(filename, {
-      directory: "packages" + elpa,
+      directory: "packages/" + elpa,
       timeout: 9999999999
     });
     promise.filename = filename;
