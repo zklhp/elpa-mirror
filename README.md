@@ -2,9 +2,12 @@
 
 ## 安装
 ```elisp
-(add-to-list 'package-archives
-            '("popkit" . "https://coding.net/u/codefalling/p/melpa-mirror/git/raw/master/"))
+(setq package-archives '(("gnu-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/gnu/")
+             ("org-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/org/")
+             ("melpa-china" . "https://git.oschina.net/EmacsChina/elpa/raw/master/melpa/")))
 ```
+
+`https` 不能正常工作的可以改成 `http`
 
 ## spacemacs
 找到 ~/.emacs.d/core/core-configuration-layer.el文件里的代码段
