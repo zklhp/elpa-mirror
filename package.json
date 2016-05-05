@@ -1,0 +1,24 @@
+{
+  "name": "elpa-mirror",
+  "version": "1.0.0",
+  "description": "Tools to mirror emacs ELPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ELPA",
+    "mirror",
+    "emacs"
+  ],
+  "author": "codefalling",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "cli-progress": "^1.1.1",
+    "fetch": "^1.0.1",
+    "lodash": "^4.11.2",
+    "node-fetch": "^1.5.1",
+    "request-promise": "^3.0.0",
+    "super-download": "^1.0.1"
+  }
+}
