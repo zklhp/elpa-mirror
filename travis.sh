@@ -9,7 +9,7 @@ echo "   CheckHostIP no" >> ~/.ssh/config
 echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
 
 chmod 600 ~/.ssh/id_rsa
-chmod 600 ~/.ssh
+# chmod 600 ~/.ssh
 
 # cat ~/.ssh/config
 git clone git@git.coding.net:codefalling/melpa-mirror.git packages
