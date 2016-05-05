@@ -16,11 +16,14 @@
   "List of ELPA archives required by Spacemacs.")
 
 ```
-将melpa源替换为emacs-china源：
+
+替换为emacs-china源：
 
 ```elisp
 (defvar configuration-layer--elpa-archives
-  '(("emacs-china" . "coding.net/u/codefalling/p/melpa-mirror/git/raw/master/")
-    ("org"   . "orgmode.org/elpa/")
-    ("gnu"   . "elpa.gnu.org/packages/"))
+  '(("melpa-china" . "git.oschina.net/EmacsChina/elpa/raw/master/melpa/")
+    ("gnu-china"   . "git.oschina.net/EmacsChina/elpa/raw/master/gnu/")
+    ("org-china"   . "git.oschina.net/EmacsChina/elpa/raw/master/org/")
+    )
   "List of ELPA archives required by Spacemacs.")
+```
