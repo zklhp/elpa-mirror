@@ -2,8 +2,6 @@ var rp = require('request-promise');
 var sd = require('super-download');
 var Q = require('q');
 var http = require('http');
-var _progress = require('cli-progress');
-
 
 var config = require('./config');
 
@@ -48,17 +46,18 @@ function downloadPackages(packages){
     );
   }
 
-  var bar = new _progress.Bar();
-  bar.start(tasks.length, 0);
+  function done(){
+    console.log('All DONE');
+  }
 
   Q.all(tasks.map(function(task){
     return task.then(function(){
       progress ++;
-      bar.update(progress);
+      console.log(progress + '/' + tasks.length);
     }).catch(function(err){
       console.log('\n' + task.filename + '\n===\n' + err);
       progress ++;
-      bar.update(progress);
+      console.log(progress + '/' + tasks.length);
     });
   }))
     .then(function(){
