@@ -1,6 +1,5 @@
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
-rm -r -f ~/.ssh
 mkdir ~/.ssh
 ssh-keyscan -H git.coding.net >> ~/.ssh/known_hosts
 echo -e $SSH_KEY > ~/.ssh/id_rsa
