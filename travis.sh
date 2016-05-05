@@ -2,8 +2,8 @@ git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
 echo -e $SSH_KEY > ~/.ssh/id_rsa
 
-echo "Host git.coding.com" >> ~/.ssh/config
-echo "   Hostname git.coding.com" >> ~/.ssh/config
+echo "Host git.coding.net" >> ~/.ssh/config
+echo "   Hostname git.coding.net" >> ~/.ssh/config
 echo "   StrictHostKeyChecking no" >> ~/.ssh/config
 echo "   CheckHostIP no" >> ~/.ssh/config
 echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
