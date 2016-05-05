@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/CodeFalling/elpa-mirror.svg?branch=master)](https://travis-ci.org/CodeFalling/elpa-mirror)
+
 ## 安装
 ```elisp
 (add-to-list 'package-archives
