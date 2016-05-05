@@ -3,7 +3,7 @@ git config --global user.name "$GIT_NAME"
 rm -r -f ~/.ssh
 mkdir ~/.ssh
 echo -e $SSH_KEY > ~/.ssh/id_rsa
-ssh-keyscan git.coding.net >> ~/.ssh/known_hosts
+echo -e "Host git.coding.net\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 chmod 600 ~/.ssh/id_rsa
 chmod 600 ~/.ssh
 export GIT_TERMINAL_PROMPT=0
