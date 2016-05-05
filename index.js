@@ -32,7 +32,7 @@ function downloadPackages(packages, elpa){
   var tasks = [];
   var progress = 0;
   tasks.push(sd(ELPA_LIST[elpa] + ARCHIVE_CONTENTS, {
-    directory: 'packages' + elpa,
+    directory: 'packages/' + elpa,
     timeout: 9999999999
   }));
   for (var i in packages) {
