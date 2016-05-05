@@ -2,7 +2,12 @@ git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_NAME"
 echo -e $SSH_KEY > ~/.ssh/id_rsa
 
-cp ssh_config ~/.ssh/ssh_config
+echo "Host git.coding.com" >> ~/.ssh/config
+echo "   Hostname git.coding.com" >> ~/.ssh/config
+echo "   StrictHostKeyChecking no" >> ~/.ssh/config
+echo "   CheckHostIP no" >> ~/.ssh/config
+echo "   UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+
 # chmod 600 ~/.ssh/id_rsa
 # chmod 600 ~/.ssh
 
