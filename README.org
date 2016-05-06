@@ -1,0 +1,39 @@
+*  Emacs ELPA 中文镜像站
+欢迎来到 emacs-chain 建立的中文镜像站！
+
+*  使用方法
+
+** Raw Emacs
+
+#+BEGIN_SRC emacs-lisp
+  (setq package-archives 
+        '(("ec-gnu" . "http://elpa.emacs-china.org/gnu/")
+          ("ec-org" . "http://elpa.emacs-china.org/org/")
+          ("ec-melpa" . "http://elpa.emacs-china.org/melpa/")))
+#+END_SRC
+
+** Spacemacs
+
+在 =~/.emacs.d/core/core-configuration-layer.el= 找到
+
+#+BEGIN_SRC emacs-lisp
+  (defvar configuration-layer--elpa-archives
+    '(("melpa" . "melpa.org/packages/")
+      ("org"   . "orgmode.org/elpa/")
+      ("gnu"   . "elpa.gnu.org/packages/"))
+    "List of ELPA archives required by Spacemacs.")
+#+END_SRC
+
+替换为 =emacs-china= 源
+
+#+BEGIN_SRC emacs-lisp
+  (defvar configuration-layer--elpa-archives
+    '(("ec-melpa" . "http://elpa.emacs-china.org/melpa/")
+      ("ec-org"   . "http://elpa.emacs-china.org/org/")
+      ("ec-gnu"   . "http://elpa.emacs-china.org/gnu/"))
+    "List of ELPA archives required by Spacemacs.")
+#+END_SRC
+
+* 加入社区
+
+[[https://emacs-china.org/][Emacs China]]
