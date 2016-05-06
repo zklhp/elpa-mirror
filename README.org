@@ -8,7 +8,7 @@
 
 * 使用方法
 
-** Raw Emacs
+** Original Emacs
 
 #+BEGIN_SRC emacs-lisp
   (setq package-archives 
