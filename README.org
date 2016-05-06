@@ -2,7 +2,9 @@
 * 欢迎
 欢迎来到 [[https://emacs-china.org/][Emacs China]] 建立的中文镜像站！
 * 构建状态
-[[https://travis-ci.org/CodeFalling/elpa-mirror][[[https://travis-ci.org/CodeFalling/elpa-mirror.svg?branch=master]]]]
+#+BEGIN_HTML
+<p><a href="https://travis-ci.org/CodeFalling/elpa-mirror"><img src="https://travis-ci.org/CodeFalling/elpa-mirror.svg?branch=master" alt="Build Status" /></a></p>
+#+END_HTML
 
 * 使用方法
 
