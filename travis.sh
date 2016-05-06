@@ -13,6 +13,12 @@ chmod 600 ~/.ssh/id_rsa
 
 # cat ~/.ssh/config
 git clone git@git.oschina.net:EmacsChina/elpa.git packages --depth=1
+
+# remove old files
+rm -r -f packages/gnu
+rm -r -f packages/melpa
+rm -r -f packages/org
+
 npm install
 node index.js
 cd packages
