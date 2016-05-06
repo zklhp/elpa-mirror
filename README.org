@@ -1,5 +1,6 @@
-*  Emacs ELPA 中文镜像站
-欢迎来到 emacs-chain 建立的中文镜像站！
+#+TITLE: Emacs ELPA 中文镜像站
+*  欢迎
+欢迎来到 [[https://emacs-china.org/][Emacs China]] 建立的中文镜像站！
 
 *  使用方法
 
@@ -36,4 +37,4 @@
 
 * 加入社区
 
-[[https://emacs-china.org/][Emacs China]]
+欢迎至 [[https://emacs-china.org/][Emacs China]] 加入我们的讨论。
