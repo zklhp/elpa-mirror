@@ -1,8 +1,10 @@
 #+TITLE: Emacs ELPA 中文镜像站
-*  欢迎
+* 欢迎
 欢迎来到 [[https://emacs-china.org/][Emacs China]] 建立的中文镜像站！
+* 构建状态
+[[https://travis-ci.org/CodeFalling/elpa-mirror][[[https://travis-ci.org/CodeFalling/elpa-mirror.svg?branch=master]]]]
 
-*  使用方法
+* 使用方法
 
 ** Raw Emacs
 
