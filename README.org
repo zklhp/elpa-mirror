@@ -1,6 +1,6 @@
 #+TITLE: Emacs ELPA 中文镜像站
 * 欢迎
-欢迎来到 [[https://emacs-china.org/][Emacs China]] 建立的中文镜像站！
+欢迎来到 Emacs ELPA 中文镜像站！
 * 构建状态
 #+BEGIN_HTML
 <p><a href="https://travis-ci.org/CodeFalling/elpa-mirror"><img src="https://travis-ci.org/CodeFalling/elpa-mirror.svg?branch=master" alt="Build Status" /></a></p>
@@ -12,9 +12,9 @@
 
 #+BEGIN_SRC emacs-lisp
   (setq package-archives 
-        '(("ec-gnu" . "http://elpa.emacs-china.org/gnu/")
-          ("ec-org" . "http://elpa.emacs-china.org/org/")
-          ("ec-melpa" . "http://elpa.emacs-china.org/melpa/")))
+        '(("gnu-cn" . "http://elpa.codefalling.com/gnu/")
+          ("org-cn" . "http://elpa.codefalling.com/org/")
+          ("melpa-cn" . "http://elpa.codefalling.com/melpa/")))
 #+END_SRC
 
 ** Spacemacs
@@ -33,12 +33,9 @@
 
 #+BEGIN_SRC emacs-lisp
   (defvar configuration-layer--elpa-archives
-    '(("ec-melpa" . "http://elpa.emacs-china.org/melpa/")
-      ("ec-org"   . "http://elpa.emacs-china.org/org/")
-      ("ec-gnu"   . "http://elpa.emacs-china.org/gnu/"))
+    '(("melpai-cn" . "http://elpa.codefalling.com/melpa/")
+      ("org-cn"   . "http://elpa.codefalling.com/org/")
+      ("gnu-cn"   . "http://elpa.codefalling.com/gnu/"))
     "List of ELPA archives required by Spacemacs.")
 #+END_SRC
 
-* 加入社区
-
-欢迎至 [[https://emacs-china.org/][Emacs China]] 加入我们的讨论。
