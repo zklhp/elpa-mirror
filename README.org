@@ -19,23 +19,11 @@
 
 ** Spacemacs
 
-在 =~/.emacs.d/core/core-configuration-layer.el= 找到
+在 =dotspacemacs/user-init ()= 加入
 
 #+BEGIN_SRC emacs-lisp
-  (defvar configuration-layer--elpa-archives
-    '(("melpa" . "melpa.org/packages/")
-      ("org"   . "orgmode.org/elpa/")
-      ("gnu"   . "elpa.gnu.org/packages/"))
-    "List of ELPA archives required by Spacemacs.")
-#+END_SRC
-
-替换为 =emacs-china= 源
-
-#+BEGIN_SRC emacs-lisp
-  (defvar configuration-layer--elpa-archives
+  (setq configuration-layer--elpa-archives
     '(("melpai-cn" . "http://elpa.codefalling.com/melpa/")
       ("org-cn"   . "http://elpa.codefalling.com/org/")
-      ("gnu-cn"   . "http://elpa.codefalling.com/gnu/"))
-    "List of ELPA archives required by Spacemacs.")
+      ("gnu-cn"   . "http://elpa.codefalling.com/gnu/")))
 #+END_SRC
-
